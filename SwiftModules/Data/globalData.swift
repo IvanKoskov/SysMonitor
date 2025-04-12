@@ -8,7 +8,7 @@
 import Foundation
 
 class globalDataModel : ObservableObject {
-    
+    @Published var selectedTab = 0  //for the main window
     @Published var spaceTotal: Double = 1
     @Published var spaceAvailable: Double = 1
     // @Published var spaceTotalOnExternalDrive: [String: Double] = [:]

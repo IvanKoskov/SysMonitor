@@ -13,7 +13,7 @@ struct footerSection: View {
     var body: some View {
         HStack {
             Link(destination: URL(string: "https://t.me/Evan_Matthew")!) {
-                Text("By Evan Matthew")
+                Text("♡ By Evan Matthew")
                     .foregroundColor(.white)
                 Image("tg")
                     .resizable()
@@ -40,6 +40,14 @@ struct footerSection: View {
             }
             .buttonStyle(.borderless)
             .keyboardShortcut("i")
+            
+            Link(destination: URL(string: "https://reddit.com")!) {
+                Image("reddit")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 25, height: 25)
+            }
+            .font(.system(size: 10))
         }
     }
     

@@ -20,6 +20,8 @@ struct userView: View {
     
     var body: some View {
         
+
+        
             HStack {
                 
                 Text(userName)
