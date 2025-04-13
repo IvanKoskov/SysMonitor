@@ -71,7 +71,7 @@ struct AvailableSpaceGeneral: View {
                                 .font(.system(size: 15))
                             
                             diskStatsItemOfTheList(Section: "Overall state", SectionInfo: diskState)
-                            diskStatsItemOfTheList(Section: "Over percentage", SectionInfo: diskStateInPercents)
+                            diskStatsItemOfTheList(Section: "Overall percentage", SectionInfo: diskStateInPercents)
                             
                             Spacer()
                         }

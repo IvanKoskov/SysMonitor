@@ -31,7 +31,7 @@ extension CustomVisualEffectBlur {
     }
 
     static var light: CustomVisualEffectBlur {
-        CustomVisualEffectBlur(blurStyle: .light) // Светлый материал
+        CustomVisualEffectBlur(blurStyle: .appearanceBased) // Светлый материал
     }
 }
 

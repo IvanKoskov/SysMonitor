@@ -4,5 +4,6 @@
 - Swift, C, Obj-C modules defined
 - LICENSE 
 - Main app structure
-- Sidebar like custom view
+- Sidebar controls added
 - Segmented control
+
