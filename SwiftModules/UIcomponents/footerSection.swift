@@ -15,39 +15,12 @@ struct footerSection: View {
             Link(destination: URL(string: "https://t.me/Evan_Matthew")!) {
                 Text("♡ By Evan Matthew")
                     .foregroundColor(.white)
-                Image("tg")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 20, height: 20)
             }
+            .offset(y: 15)
             .font(.system(size: 10))
             
-            Link(destination: URL(string: "https://github.com/IvanKoskov")!) {
-                Image("git")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 20, height: 20)
-            }
-            .font(.system(size: 10))
+    
             
-            Button(action: {
-                showAboutPanel()
-            }) {
-                Image("generalimage")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 20, height: 20)
-            }
-            .buttonStyle(.borderless)
-            .keyboardShortcut("i")
-            
-            Link(destination: URL(string: "https://reddit.com")!) {
-                Image("reddit")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 25, height: 25)
-            }
-            .font(.system(size: 10))
         }
     }
     
@@ -58,6 +31,7 @@ struct footerSection: View {
             let window = NSWindow()
             window.styleMask = styleMask
             window.title = "SysMonitor utility"
+            window.level = .floating
             window.contentView = NSHostingView(rootView: AboutView())
             aboutWindowController = NSWindowController(window: window)
         }

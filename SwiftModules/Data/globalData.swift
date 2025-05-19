@@ -11,8 +11,11 @@ class globalDataModel : ObservableObject {
     @Published var selectedTab = 0  //for the main window
     @Published var spaceTotal: Double = 1
     @Published var spaceAvailable: Double = 1
-    @Published var sideBarHelpButtonText = "Explore SysMonitor's sleek interface, designed to give you quick, handy insights about your MAcBook! Right now, we're spotlighting the Drives section, where you can effortlessly check key details like available disk space and other essential info about your machine's storage. It's all about keeping you informed with essential data!" //It will hold the help info about specific section of the app, thus it is global
-    
+    @Published var sideBarHelpButtonText = "Explore SysMonitor's sleek interface, designed to give you quick, handy insights about your MacBook! Right now, we're spotlighting the Drives section, where you can effortlessly check key details like available disk space and other essential info about your machine's storage. It's all about keeping you informed with essential data!" //It will hold the help info about specific section of the app, thus it is global
+    @Published var freeRam: CUnsignedLongLong = 0
+    @Published var usedRam: CUnsignedLongLong = 0
+    @Published var totalRam: CUnsignedLongLong = 0
+    @Published var cpuTemp: CDouble = 1.01
     // @Published var spaceTotalOnExternalDrive: [String: Double] = [:]
     // @Published var spaceAvailbaleOnExternalDrive: [String: Double] = [:]
     

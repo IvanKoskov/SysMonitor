@@ -60,9 +60,9 @@ struct SysMenu: View {
                 }
                 .tag(0)
                 
-                Text("hello")
+                vitalsView()
                     .tabItem {
-                        Label("Debug", systemImage: "externaldrive.fill.badge.questionmark")
+                        Label("Vitals", systemImage: "externaldrive.fill.badge.questionmark")
                     }
                     .tag(1)
                 
@@ -78,10 +78,10 @@ struct SysMenu: View {
     private func changeTheHelpMessage() {
         
         if (globaldata.selectedTab == 0) {
-            globaldata.sideBarHelpButtonText = "Explore SysMonitor's sleek interface, designed to give you quick, handy insights about your MAcBook! Right now, we're spotlighting the Drives section, where you can effortlessly check key details like available disk space and other essential info about your machine's storage. It's all about keeping you informed with essential data!"
+            globaldata.sideBarHelpButtonText = "Explore SysMonitor's sleek interface, designed to give you quick, handy insights about your MacBook! Right now, we're spotlighting the Drives section, where you can effortlessly check key details like available disk space and other essential info about your machine's storage. It's all about keeping you informed with essential data!"
         } else if (globaldata.selectedTab == 1) {
             
-            globaldata.sideBarHelpButtonText = ""
+            globaldata.sideBarHelpButtonText = "Monitor CPU, RAM, and GPU in real-time, perfect for gamers and developers optimizing performance. In order to keep the stats dynamic you do not need t"
             
         }
         

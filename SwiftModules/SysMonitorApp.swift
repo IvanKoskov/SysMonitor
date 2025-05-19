@@ -64,9 +64,25 @@ struct SysMonitorApp: App {
     var body: some Scene {
         
         MenuBarExtra("SysMonitor App", image: "menubar") {
-                 SysMenu()
-                .environmentObject(globaldata)
+                 ZStack {
+                     WindowAccessor { window in
+                         if let window = window {
+                             // Optional: cast to NSPanel to tweak more
+                             window.level = .floating
+                             window.isReleasedWhenClosed = false
+                             window.hidesOnDeactivate = false
+                             window.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
+
+                             WindowManager.shared.window = window
+                         }
+                     }
+
+                     SysMenu()
+                 }
+                 
+                 .environmentObject(globaldata)
              }
+            
         .menuBarExtraStyle(.window)
         .commands {
                   CommandGroup(replacing: CommandGroupPlacement.appInfo) {
