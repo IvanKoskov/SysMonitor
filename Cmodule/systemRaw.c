@@ -7,7 +7,6 @@
 
 #include "systemRaw.h"
 
-
 unsigned long long ramFreeMemory(_NullPar){
     
     vm_size_t page_size;
@@ -69,6 +68,4 @@ unsigned long long totalRamMemory(_NullPar){
     fprintf(stderr, "Error: Failed to retrieve total memory\n");
     return 1;
 }
-
-
 

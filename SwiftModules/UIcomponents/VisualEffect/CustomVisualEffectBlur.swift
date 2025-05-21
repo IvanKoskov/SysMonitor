@@ -33,7 +33,7 @@ extension CustomVisualEffectBlur {
     static var light: CustomVisualEffectBlur {
         CustomVisualEffectBlur(blurStyle: .appearanceBased) // Светлый материал
     }
-}
+    }
 
 struct VisualEffect: NSViewRepresentable {
    func makeNSView(context: Self.Context) -> NSView { return NSVisualEffectView() }

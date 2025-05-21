@@ -69,7 +69,7 @@ struct vitalsView: View {
         }
             
     }
-        .frame(width: 350, height: 210)
+        .frame(width: 300, height: 210)
       
         .onAppear {
             updateDynamicInfo()

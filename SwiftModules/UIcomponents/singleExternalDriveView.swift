@@ -78,7 +78,7 @@ struct singleExternalDriveView: View {
                 
                 VStack {
                     
-                    ScrollView {
+                    ScrollView(showsIndicators: false) {
                         
                         Text("Drive stats")
                             .textSelection(.enabled)
@@ -91,8 +91,23 @@ struct singleExternalDriveView: View {
                         diskStatsItemOfTheList(Section: "Overall state", SectionInfo: userData.percentage(ofHowMuchDiskSpaceIsUsed: 0, with: Int32(spaceTotal - spaceAvailable), also: Int32(spaceTotal)))
                         diskStatsItemOfTheList(Section: "Encryption is", SectionInfo: userData.isEncrypted(Drive))
                         
+                        Divider()
+                        
+                        Button {
+                            let resulted: Bool =  ejectExternalDriveAtPath(path: Drive)
+                            if (resulted == false){
+                                
+                                print("ERROR EJECTING")
+                                
+                            }
+                        } label: {
+                            Text("Eject drive")
+                        }
+
+                        
                         Spacer()
                     }
+                    
                 }
                 .padding()
                 .frame(width: 200, height: 140)
@@ -135,7 +150,7 @@ struct singleExternalDriveView: View {
         }
         
         Divider()
-            .offset(y: -12)
+            .offset(y: 10)
     }
     
     private func updateDynamicInfo() {

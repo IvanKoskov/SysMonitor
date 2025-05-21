@@ -24,7 +24,7 @@ struct sideBar: View {
                 print(globaldata.sideBarHelpButtonText)
                 helpMessagePopOver = true
             } label: {
-                Image(systemName: "questionmark.circle.fill")
+                Image(systemName: "questionmark.circle")
                     .font(.system(size: 20))
             }
             .buttonStyle(.plain)
@@ -49,6 +49,7 @@ struct sideBar: View {
                 Image(systemName: "power")
                     .font(.system(size: 20))
             }
+            .keyboardShortcut("Q")
             .buttonStyle(.plain)
             .padding(.top, 2)
             .contextMenu{

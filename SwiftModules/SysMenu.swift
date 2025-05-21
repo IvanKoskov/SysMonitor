@@ -20,10 +20,10 @@ struct SysMenu: View {
             TabView (selection: $globaldata.selectedTab){
                 
                 
-                ScrollView {
+                ScrollView (.vertical) {
                     
                     
-                    CustomVisualEffectBlur.light
+                  //  CustomVisualEffectBlur.light
                     VStack {
                         
                         userView()
@@ -51,10 +51,11 @@ struct SysMenu: View {
                         
                     }
                     .padding()
-                    .frame(width: 300, height: 200)
+                    
                     
                 }
-                .scrollBounceBehavior(.always)
+                .frame(width: 300, height: 200)
+                //.scrollBounceBehavior(.automatic)
                 .tabItem {
                     Label("Drives", systemImage: "externaldrive.fill.badge.questionmark")
                 }
@@ -73,6 +74,7 @@ struct SysMenu: View {
         }
     
     }
+    
     
     
     private func changeTheHelpMessage() {

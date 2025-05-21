@@ -3,10 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>LSUIElement</key>
-	<false/>
+	<true/>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict/>
 	</array>
+    <key>com.apple.security.app-sandbox</key>
+    <true/>
+    <key>com.apple.security.files.user-selected.read-only</key>
+    <true/>
+    <key>com.apple.security.temporary-exception.sbpl</key>
+    <array>
+        <string>(allow iokit-open)</string>
+        <string>(allow iokit-set-properties (iokit-property &quot;AppleSMC&quot;))</string>
+        <string>(allow mach-lookup (global-name &quot;com.apple.AssetCacheLocatorService&quot;))</string>
+    </array>
 </dict>
 </plist>

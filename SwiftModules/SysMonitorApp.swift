@@ -65,23 +65,14 @@ struct SysMonitorApp: App {
         
         MenuBarExtra("SysMonitor App", image: "menubar") {
                  ZStack {
-                     WindowAccessor { window in
-                         if let window = window {
-                             // Optional: cast to NSPanel to tweak more
-                             window.level = .floating
-                             window.isReleasedWhenClosed = false
-                             window.hidesOnDeactivate = false
-                             window.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
-
-                             WindowManager.shared.window = window
-                         }
-                     }
-
+               
                      SysMenu()
+                         
                  }
-                 
+
                  .environmentObject(globaldata)
              }
+        .keyboardShortcut("s")
             
         .menuBarExtraStyle(.window)
         .commands {
